@@ -146,8 +146,8 @@ spec:
       serviceAccountName: openshift-controller-manager-sa
       containers:
       - name: controller-manager
-        image: ${IMAGE}
-        imagePullPolicy: IfNotPresent
+        image: docker.io/gmontero/origin-openshift-controller-manager:latest
+        imagePullPolicy: Always
         command: ["openshift-controller-manager", "start"]
         args:
         - "--config=/var/run/configmaps/config/config.yaml"
